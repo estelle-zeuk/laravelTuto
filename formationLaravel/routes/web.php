@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,11 +14,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [PostController::index]);
 
-Route::get('/posts', function () {
+/* Route::get('/posts', function () {
     return response()->json([
         "title"=>"J'apprends laravel",
         "description" => "C'est vraiment très intéressant!!!"
@@ -26,4 +25,4 @@ Route::get('/posts', function () {
 
 Route::get('/articles', function(){
     return view('articles');
-});
+}); */

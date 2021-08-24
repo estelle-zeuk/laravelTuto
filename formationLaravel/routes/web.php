@@ -14,7 +14,7 @@ use App\Http\Controllers\PostController;
 |
 */
 
-Route::get('/', [PostController::index]);
+Route::get('/', [PostController::class, 'index']);
 
 /* Route::get('/posts', function () {
     return response()->json([

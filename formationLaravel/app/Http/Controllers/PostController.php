@@ -14,4 +14,21 @@ class PostController extends Controller
         ];
         return view('articles', compact('posts'));
     }
+
+    public function show($id)
+    {
+        $posts = [
+            1=>"Mon article 1",
+            2=>"Mon article 2"
+        ];
+
+        $post = $posts[$id] ?? 'Pas d\'articles disponible à cet index';
+        //dd($post);
+        return view('article', compact('post'));
+    }
+
+    public function contact()
+    {
+        return view ('contact');
+    }
 }

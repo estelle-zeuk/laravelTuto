@@ -2,8 +2,13 @@
 
 @section('content')
     <h1>Liste des articles</h1>
-    @foreach ($posts as $post )
-        <h2><a href="#">{{ $post }}</a></h2>
-    @endforeach
+    @if ($posts->count() > 0)
+        @foreach ($posts as $post )
+            <h2><a href="{{ route('posts.show', $post->id) }}">{{ $post->title }}</a></h2>
+        @endforeach
+    @else
+        <span>Aucun post en base de données</span>
+    @endif
+    
     
 @endsection

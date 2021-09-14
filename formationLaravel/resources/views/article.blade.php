@@ -21,4 +21,12 @@
         <span>Aucun tag associé à ce post</span>
     @endforelse
 
+    <hr>
+    @if ($post->imageArtist)
+        <span>Nom de l'article de l'image: {{ $post->imageArtist->name }}</span>
+        @else
+        <h5>Pas d'artiste lié à cette image de post</h5>
+    @endif
+    
+    
 @endsection

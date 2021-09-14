@@ -29,7 +29,7 @@ class PostController extends Controller
 
     public function store(Request $request)
     {
-        //dd($request);
+        //dd($request->avatar->store('avatars'));
        /*  $post = new Post();
         $post->title = $request->title;
         $post->content=$request->content;
